@@ -11,7 +11,7 @@
         <div class="card-header">
             <div class="float-right">
                 <a href="{{ route('paket.create') }}" class="btn btn-primary">
-                    <i class="fas fa-plus"></i> Tambah Paket
+                    <i class="fa fa-plus"></i> Tambah Paket
                 </a>
             </div>
         </div>
@@ -44,16 +44,16 @@
                             <td>
                                 <div class="btn-group">
                                     <a href="{{ route('paket.show', $item->PaketID) }}" class="btn btn-info btn-sm">
-                                        <i class="fas fa-eye"></i>
+                                        <i class="fa fa-eye"></i>
                                     </a>
                                     <a href="{{ route('paket.edit', $item->PaketID) }}" class="btn btn-warning btn-sm">
-                                        <i class="fas fa-edit"></i>
+                                        <i class="fa fa-edit"></i>
                                     </a>
                                     <form action="{{ route('paket.destroy', $item->PaketID) }}" method="POST" onsubmit="return confirm('Apakah Anda yakin ingin menghapus data ini?')">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-danger btn-sm">
-                                            <i class="fas fa-trash"></i>
+                                            <i class="fa fa-trash"></i>
                                         </button>
                                     </form>
                                 </div>

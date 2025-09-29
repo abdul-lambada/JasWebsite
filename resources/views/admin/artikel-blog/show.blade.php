@@ -6,10 +6,10 @@
         <h1 class="h3 mb-0 text-gray-800">Detail Artikel Blog</h1>
         <div>
             <a href="{{ route('artikel-blog.edit', $artikelBlog->ArtikelID) }}" class="btn btn-sm btn-primary">
-                <i class="fas fa-edit fa-sm"></i> Edit
+                <i class="fa fa-edit fa-sm"></i> Edit
             </a>
             <a href="{{ route('artikel-blog.index') }}" class="btn btn-sm btn-secondary">
-                <i class="fas fa-arrow-left fa-sm"></i> Kembali
+                <i class="fa fa-arrow-left fa-sm"></i> Kembali
             </a>
         </div>
     </div>

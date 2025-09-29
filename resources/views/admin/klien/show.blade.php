@@ -38,10 +38,10 @@
             
             <div class="mt-3">
                 <a href="{{ route('klien.edit', $klien->KlienID) }}" class="btn btn-warning">
-                    <i class="fas fa-edit"></i> Edit
+                    <i class="fa fa-edit"></i> Edit
                 </a>
                 <a href="{{ route('klien.index') }}" class="btn btn-secondary">
-                    <i class="fas fa-arrow-left"></i> Kembali
+                    <i class="fa fa-arrow-left"></i> Kembali
                 </a>
             </div>
         </div>

@@ -15,10 +15,10 @@
                     <p>Total Klien</p>
                 </div>
                 <div class="icon">
-                    <i class="fas fa-users"></i>
+                    <i class="fa fa-users"></i>
                 </div>
                 <a href="{{ route('klien.index') }}" class="small-box-footer">
-                    Lihat Detail <i class="fas fa-arrow-circle-right"></i>
+                    Lihat Detail <i class="fa fa-arrow-circle-right"></i>
                 </a>
             </div>
         </div>
@@ -30,10 +30,10 @@
                     <p>Total Paket</p>
                 </div>
                 <div class="icon">
-                    <i class="fas fa-box"></i>
+                    <i class="fa fa-cubes"></i>
                 </div>
                 <a href="{{ route('paket.index') }}" class="small-box-footer">
-                    Lihat Detail <i class="fas fa-arrow-circle-right"></i>
+                    Lihat Detail <i class="fa fa-arrow-circle-right"></i>
                 </a>
             </div>
         </div>
@@ -45,10 +45,10 @@
                     <p>Total Pesanan</p>
                 </div>
                 <div class="icon">
-                    <i class="fas fa-shopping-cart"></i>
+                    <i class="fa fa-shopping-cart"></i>
                 </div>
                 <a href="{{ route('pesanan.index') }}" class="small-box-footer">
-                    Lihat Detail <i class="fas fa-arrow-circle-right"></i>
+                    Lihat Detail <i class="fa fa-arrow-circle-right"></i>
                 </a>
             </div>
         </div>
@@ -60,10 +60,10 @@
                     <p>Total Proyek</p>
                 </div>
                 <div class="icon">
-                    <i class="fas fa-project-diagram"></i>
+                    <i class="fa fa-sitemap"></i>
                 </div>
                 <a href="{{ route('proyek.index') }}" class="small-box-footer">
-                    Lihat Detail <i class="fas fa-arrow-circle-right"></i>
+                    Lihat Detail <i class="fa fa-arrow-circle-right"></i>
                 </a>
             </div>
         </div>

@@ -57,12 +57,12 @@
                     <td>
                         @if($pesanan->proyek)
                             <a href="{{ route('proyek.show', $pesanan->proyek->ProyekID) }}" class="btn btn-sm btn-info">
-                                <i class="fas fa-external-link-alt"></i> Lihat Proyek #{{ $pesanan->proyek->ProyekID }}
+                                <i class="fa fa-external-link"></i> Lihat Proyek #{{ $pesanan->proyek->ProyekID }}
                             </a>
                         @else
                             <span class="text-muted">Belum ada proyek terkait</span>
                             <a href="{{ route('proyek.create') }}?pesanan_id={{ $pesanan->PesananID }}" class="btn btn-sm btn-success ml-2">
-                                <i class="fas fa-plus"></i> Buat Proyek
+                                <i class="fa fa-plus"></i> Buat Proyek
                             </a>
                         @endif
                     </td>
@@ -71,10 +71,10 @@
             
             <div class="mt-3">
                 <a href="{{ route('pesanan.edit', $pesanan->PesananID) }}" class="btn btn-warning">
-                    <i class="fas fa-edit"></i> Edit
+                    <i class="fa fa-edit"></i> Edit
                 </a>
                 <a href="{{ route('pesanan.index') }}" class="btn btn-secondary">
-                    <i class="fas fa-arrow-left"></i> Kembali
+                    <i class="fa fa-arrow-left"></i> Kembali
                 </a>
             </div>
         </div>
