@@ -5,7 +5,7 @@
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800">Daftar Testimoni</h1>
         <a href="{{ route('testimoni.create') }}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
-            <i class="fas fa-plus fa-sm text-white-50"></i> Tambah Testimoni
+            <i class="fa fa-plus text-white-50"></i> Tambah Testimoni
         </a>
     </div>
 
@@ -46,9 +46,9 @@
                             <td>
                                 @for($i = 1; $i <= 5; $i++)
                                     @if($i <= $item->Rating)
-                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fa fa-star text-warning"></i>
                                     @else
-                                        <i class="far fa-star text-warning"></i>
+                                        <i class="fa fa-star-o text-warning"></i>
                                     @endif
                                 @endfor
                             </td>
@@ -56,16 +56,16 @@
                             <td>
                                 <div class="btn-group" role="group">
                                     <a href="{{ route('testimoni.show', $item->TestimoniID) }}" class="btn btn-sm btn-info">
-                                        <i class="fas fa-eye"></i>
+                                        <i class="fa fa-eye"></i>
                                     </a>
                                     <a href="{{ route('testimoni.edit', $item->TestimoniID) }}" class="btn btn-sm btn-warning">
-                                        <i class="fas fa-edit"></i>
+                                        <i class="fa fa-pencil"></i>
                                     </a>
                                     <form action="{{ route('testimoni.destroy', $item->TestimoniID) }}" method="POST" class="d-inline">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus testimoni ini?')">
-                                            <i class="fas fa-trash"></i>
+                                            <i class="fa fa-trash"></i>
                                         </button>
                                     </form>
                                 </div>

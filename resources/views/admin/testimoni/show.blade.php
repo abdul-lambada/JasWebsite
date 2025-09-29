@@ -6,10 +6,10 @@
         <h1 class="h3 mb-0 text-gray-800">Detail Testimoni</h1>
         <div>
             <a href="{{ route('testimoni.edit', $testimoni->TestimoniID) }}" class="btn btn-sm btn-warning shadow-sm">
-                <i class="fas fa-edit fa-sm text-white-50"></i> Edit
+                <i class="fa fa-pencil text-white-50"></i> Edit
             </a>
             <a href="{{ route('testimoni.index') }}" class="btn btn-sm btn-secondary shadow-sm">
-                <i class="fas fa-arrow-left fa-sm text-white-50"></i> Kembali
+                <i class="fa fa-arrow-left text-white-50"></i> Kembali
             </a>
         </div>
     </div>
@@ -52,9 +52,9 @@
                                 <td>
                                     @for($i = 1; $i <= 5; $i++)
                                         @if($i <= $testimoni->Rating)
-                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fa fa-star text-warning"></i>
                                         @else
-                                            <i class="far fa-star text-warning"></i>
+                                            <i class="fa fa-star-o text-warning"></i>
                                         @endif
                                     @endfor
                                     ({{ $testimoni->Rating }}/5)
@@ -77,7 +77,7 @@
                 </div>
                 <div class="card-body">
                     @if($testimoni->proyek && $testimoni->proyek->pesanan && $testimoni->proyek->pesanan->klien)
-                        <h5>{{ $testimoni->proyek->pesanan->klien->NamaKlien }}</h5>
+                        <h5>{{ $testimoni->proyek->pesanan->klien->Nama }}</h5>
                         <p>{{ $testimoni->proyek->pesanan->klien->Email }}</p>
                         <p>{{ $testimoni->proyek->pesanan->klien->NoTelepon }}</p>
                     @else

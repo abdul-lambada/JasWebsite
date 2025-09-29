@@ -9,10 +9,12 @@ class Testimoni extends Model
 {
     protected $primaryKey = 'TestimoniID';
     protected $fillable = [
+        'KlienID',
         'ProyekID',
         'Nama',
         'Jabatan',
         'Isi',
+        'IsiTestimoni',
         'Rating',
         'TanggalDiberikan'
     ];
@@ -23,5 +25,13 @@ class Testimoni extends Model
     public function proyek(): BelongsTo
     {
         return $this->belongsTo(Proyek::class, 'ProyekID', 'ProyekID');
+    }
+
+    /**
+     * Mendapatkan klien pemberi testimoni
+     */
+    public function klien(): BelongsTo
+    {
+        return $this->belongsTo(Klien::class, 'KlienID', 'KlienID');
     }
 }

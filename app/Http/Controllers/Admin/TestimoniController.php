@@ -66,9 +66,9 @@ class TestimoniController extends Controller
     public function edit(string $id)
     {
         $testimoni = Testimoni::findOrFail($id);
-        $proyek = Proyek::all();
+        $proyeks = Proyek::all();
         
-        return view('admin.testimoni.edit', compact('testimoni', 'proyek'));
+        return view('admin.testimoni.edit', compact('testimoni', 'proyeks'));
     }
 
     /**

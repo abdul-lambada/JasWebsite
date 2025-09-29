@@ -92,18 +92,18 @@
                                                 <img src="{{ asset('storage/'.$tim->URLFoto) }}" alt="{{ $tim->Nama }}" class="rounded-circle mr-3" style="width: 60px; height: 60px; object-fit: cover;">
                                             @else
                                                 <div class="rounded-circle bg-secondary text-white d-flex align-items-center justify-content-center mr-3" style="width: 60px; height: 60px;">
-                                                    <i class="fas fa-user fa-2x"></i>
+                                                    <i class="fa fa-user fa-2x"></i>
                                                 </div>
                                             @endif
                                             <div>
                                                 <h5 class="card-title mb-1">{{ $tim->Nama }}</h5>
                                                 <h6 class="card-subtitle mb-2 text-muted">{{ $tim->Jabatan }}</h6>
                                                 <p class="card-text small mb-1">
-                                                    <i class="fas fa-tools mr-1"></i> {{ $tim->Keahlian }}
+                                                    <i class="fa fa-wrench mr-1"></i> {{ $tim->Keahlian }}
                                                 </p>
                                                 @if($tim->LinkLinkedin)
                                                 <a href="{{ $tim->LinkLinkedin }}" target="_blank" class="btn btn-sm btn-outline-primary">
-                                                    <i class="fab fa-linkedin"></i> LinkedIn
+                                                    <i class="fa fa-linkedin"></i> LinkedIn
                                                 </a>
                                                 @endif
                                             </div>
@@ -125,7 +125,7 @@
                 <div class="card-header py-3 d-flex justify-content-between align-items-center">
                     <h6 class="m-0 font-weight-bold text-primary">Testimoni</h6>
                     <a href="{{ route('testimoni.create', ['proyek_id' => $proyek->ProyekID]) }}" class="btn btn-sm btn-primary">
-                        <i class="fas fa-plus fa-sm"></i> Tambah Testimoni
+                        <i class="fa fa-plus"></i> Tambah Testimoni
                     </a>
                 </div>
                 <div class="card-body">
@@ -152,9 +152,9 @@
                                         <td>
                                             @for($i = 1; $i <= 5; $i++)
                                                 @if($i <= $testimoni->Rating)
-                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="fa fa-star text-warning"></i>
                                                 @else
-                                                    <i class="far fa-star text-warning"></i>
+                                                    <i class="fa fa-star-o text-warning"></i>
                                                 @endif
                                             @endfor
                                         </td>

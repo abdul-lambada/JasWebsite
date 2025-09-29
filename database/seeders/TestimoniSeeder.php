@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
+use App\Models\Testimoni;
 use App\Models\Proyek;
 use App\Models\Pesanan;
 use Faker\Factory as Faker;
@@ -30,13 +30,15 @@ class TestimoniSeeder extends Seeder
                 continue;
             }
 
-            DB::table('testimonis')->insert([
+            Testimoni::create([
                 'KlienID' => $pesanan->KlienID,
                 'ProyekID' => $proyek->ProyekID,
+                'Nama' => $faker->name(),
+                'Jabatan' => $faker->jobTitle(),
+                'Rating' => $faker->numberBetween(3, 5),
+                'Isi' => $faker->realText(160),
                 'IsiTestimoni' => $faker->realText(160),
                 'TanggalDiberikan' => $faker->dateTimeBetween($pesanan->TanggalPesanan, 'now'),
-                'created_at' => now(),
-                'updated_at' => now(),
             ]);
         }
     }
