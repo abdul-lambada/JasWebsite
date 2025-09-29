@@ -26,7 +26,7 @@ class AuthController extends Controller
             // Cek apakah user memiliki role admin
             if ($user->role === 'admin') {
                 $request->session()->regenerate();
-                return redirect()->intended('admin/dashboard');
+                return redirect()->intended('admin');
             }
             
             // Jika bukan admin, logout dan kembali dengan pesan error
