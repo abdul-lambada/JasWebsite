@@ -106,42 +106,42 @@
                 <!-- sidebar menu: : style can be found in sidebar.less -->
                 <ul class="sidebar-menu" data-widget="tree">
                     <li class="header">MAIN NAVIGATION</li>
-                    <li>
+                    <li class="{{ request()->routeIs('admin.dashboard') ? 'active' : '' }}">
                         <a href="{{ route('admin.dashboard') }}">
                             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                         </a>
                     </li>
-                    <li>
+                    <li class="{{ request()->routeIs('klien.*') ? 'active' : '' }}">
                         <a href="{{ route('klien.index') }}">
                             <i class="fa fa-users"></i> <span>Klien</span>
                         </a>
                     </li>
-                    <li>
+                    <li class="{{ request()->routeIs('paket.*') ? 'active' : '' }}">
                         <a href="{{ route('paket.index') }}">
                             <i class="fa fa-cubes"></i> <span>Paket</span>
                         </a>
                     </li>
-                    <li>
+                    <li class="{{ request()->routeIs('tim.*') ? 'active' : '' }}">
                         <a href="{{ route('tim.index') }}">
                             <i class="fa fa-user-plus"></i> <span>Tim</span>
                         </a>
                     </li>
-                    <li>
+                    <li class="{{ request()->routeIs('pesanan.*') ? 'active' : '' }}">
                         <a href="{{ route('pesanan.index') }}">
                             <i class="fa fa-shopping-cart"></i> <span>Pesanan</span>
                         </a>
                     </li>
-                    <li>
+                    <li class="{{ request()->routeIs('proyek.*') ? 'active' : '' }}">
                         <a href="{{ route('proyek.index') }}">
                             <i class="fa fa-tasks"></i> <span>Proyek</span>
                         </a>
                     </li>
-                    <li>
+                    <li class="{{ request()->routeIs('testimoni.*') ? 'active' : '' }}">
                         <a href="{{ route('testimoni.index') }}">
                             <i class="fa fa-comments"></i> <span>Testimoni</span>
                         </a>
                     </li>
-                    <li>
+                    <li class="{{ request()->routeIs('artikel-blog.*') ? 'active' : '' }}">
                         <a href="{{ route('artikel-blog.index') }}">
                             <i class="fa fa-newspaper-o"></i> <span>Artikel Blog</span>
                         </a>
