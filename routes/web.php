@@ -9,13 +9,21 @@ use App\Http\Controllers\Admin\PesananController;
 use App\Http\Controllers\Admin\ProyekController;
 use App\Http\Controllers\Admin\TestimoniController;
 use App\Http\Controllers\Admin\ArtikelBlogController;
+use App\Http\Controllers\Admin\AuthController;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-// Admin Routes
+// Admin Auth Routes
 Route::prefix('admin')->group(function () {
+    Route::get('/login', [AuthController::class, 'showLoginForm'])->name('admin.login.form');
+    Route::post('/login', [AuthController::class, 'login'])->name('admin.login');
+    Route::post('/logout', [AuthController::class, 'logout'])->name('admin.logout');
+});
+
+// Admin Protected Routes
+Route::prefix('admin')->middleware('admin')->group(function () {
     Route::get('/', [DashboardController::class, 'index'])->name('admin.dashboard');
     
     // Klien Routes
@@ -37,5 +45,5 @@ Route::prefix('admin')->group(function () {
     Route::resource('testimoni', TestimoniController::class);
     
     // ArtikelBlog Routes
-    Route::resource('artikel', ArtikelBlogController::class);
+    Route::resource('artikel-blog', ArtikelBlogController::class);
 });
